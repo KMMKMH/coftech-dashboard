@@ -1,0 +1,20 @@
+export interface FileType {
+    bot_id: string | null,
+    bucket: string,
+    company_id: string,
+    created_at: string,
+    description: string | null,
+    extension: string,
+    file_name: string,
+    file_size: string,
+    folder: string | null,
+    id: number,
+    identificator: string,
+    name: string,
+    path: string,
+    size: number,
+    source: string,
+    updated_at: string,
+    upload_by: string,
+    uuid_unique: string
+}

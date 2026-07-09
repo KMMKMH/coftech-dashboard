@@ -1,0 +1,197 @@
+$coftech-primary-light: #1B89E6;
+$coftech-primary-dark: #3BA3F7;
+$coftech-primary-hover-light: #0F73C9;
+$coftech-primary-hover-dark: #5BB6FF;
+$coftech-description-light: #475569;
+$coftech-description-dark: #CBD5E1;
+$coftech-panel-light: #FFFFFF;
+$coftech-panel-dark: #102A43;
+$coftech-background-light: #F8FBFF;
+$coftech-background-dark: #07111F;
+$coftech-border-light: #D9E2EC;
+$coftech-border-dark: #1E3A5F;
+$coftech-text-light: #0F172A;
+$coftech-text-dark: #F8FBFF;
+$coftech-inText-light: #FFFFFF;
+$coftech-inText-dark: #07111F;
+$coftech-descriptionColor-light: #475569;
+$coftech-descriptionColor-dark: #CBD5E1;
+$coftech-icon-light: #1B89E6;
+$coftech-icon-dark: #3BA3F7;
+$coftech-inputBorder-light: #D9E2EC;
+$coftech-inputBorder-dark: #1E3A5F;
+$coftech-divider-light: #E5EEF7;
+$coftech-divider-dark: #17304F;
+$coftech-error: #EF4444;
+
+.rbc-calendar {
+  width: 100%;
+
+  .rbc-event {
+    background-color: $coftech-background-light;
+    color: $coftech-primary-light;
+    border-left: 5px solid $coftech-primary-light;
+    border-right: 0.5px solid $coftech-primary-light;
+    border-top: 0.5px solid $coftech-primary-light;
+    border-bottom: 0.5px solid $coftech-primary-light;
+  }
+
+  .rbc-event:focus {
+    outline: none;
+  }
+
+  .rbc-time-view {
+    border-radius: 10px;
+    margin-top: 8px;
+    background-color: $coftech-panel-light;
+    border: none;
+    box-shadow: 0px 2px 4px -2px #0F172A0f, 0px 4px 8px -2px #0F172A1a;
+  }
+
+  .rbc-toolbar button:active,
+  .rbc-toolbar button.rbc-active {
+    color: white;
+    background-color: $coftech-primary-light;
+    border: none;
+  }
+
+  .rbc-btn-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    button {
+      border-radius: 10px;
+      color: $coftech-text-light;
+      background-color: $coftech-panel-light;
+      border: none;
+      box-shadow: 0px 2px 4px -2px #0F172A0f, 0px 4px 8px -2px #0F172A1a;
+    }
+
+    button:hover {
+      background-color: $coftech-primary-hover-light;
+      color: white;
+      border: $coftech-primary-light;
+    }
+
+    button.rbc-active:focus {
+      color: white;
+      background-color: $coftech-primary-light;
+      border: none;
+    }
+  }
+
+  .rbc-time-view .rbc-row {
+    min-height: auto;
+  }
+
+  .rbc-time-slot {
+    flex: none;
+  }
+
+  .rbc-header {
+    button {
+      padding: 8px;
+    }
+  }
+  .rbc-timeslot-group {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rbc-current-time-indicator {
+    background-color: $coftech-error;
+  }
+
+  .rbc-agenda-view {
+    background-color: $coftech-background-light;
+
+    table thead {
+      display: none;
+    }
+  }
+
+  .rbc-btn-group > button:last-child:not(:first-child) {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .rbc-btn-group > button:first-child:not(:last-child) {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .rbc-btn-group > button:not(:first-child):not(:last-child) {
+    border-radius: 10px;
+  }
+
+  body.dark & {
+    .rbc-event {
+      background-color: $coftech-background-dark;
+      color: $coftech-primary-dark;
+      border-left: 5px solid $coftech-primary-dark;
+      border-right: 0.5px solid $coftech-primary-dark;
+      border-top: 0.5px solid $coftech-primary-dark;
+      border-bottom: 0.5px solid $coftech-primary-dark;
+    }
+    .rbc-time-view {
+      background-color: $coftech-panel-dark;
+    }
+    .rbc-toolbar button:active,
+    .rbc-toolbar button.rbc-active {
+      color: white;
+      background-color: $coftech-primary-dark;
+      border: none;
+    }
+
+    .rbc-btn-group {
+      button {
+        color: $coftech-text-dark;
+        background-color: $coftech-panel-dark;
+        border: none;
+      }
+
+      button:hover {
+        background-color: $coftech-primary-hover-dark;
+        color: white;
+        border: $coftech-primary-dark;
+      }
+    }
+
+    .rbc-header,
+    .rbc-timeslot-group {
+      border-bottom: 1px solid $coftech-divider-dark;
+    }
+
+    .rbc-time-header-content,
+    .rbc-time-content > * + * > *,
+    .rbc-header + .rbc-header,
+    .rbc-day-bg + .rbc-day-bg {
+      border-left: 1px solid $coftech-divider-dark;
+    }
+
+    .rbc-time-content {
+      border-top: 2px solid $coftech-divider-dark;
+    }
+
+    .rbc-day-slot .rbc-time-slot {
+      border-top: 1px solid $coftech-divider-dark;
+    }
+
+    .rbc-today {
+      background-color: rgba(27, 137, 230, 0.10);
+    }
+
+    .rbc-agenda-view {
+      background-color: $coftech-background-dark;
+    }
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--coftech-primary) transparent;
+}
+
+[data-theme="dark"] * {
+  scrollbar-color: var(--coftech-primary-dark) transparent;
+}
