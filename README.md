@@ -14,7 +14,7 @@ The goal is to give businesses a central place to control their messaging bots w
 
 ## Architecture
 
-![Coftech Bot Architecture](public/Coftech Bot Architecture.png)
+![Coftech Bot Architecture](public/Coftech_Bot_Architecture.png)
 
 *Coftech Bot connects the dashboard, backend API, and WhatsApp processor into one automation platform.*
 
